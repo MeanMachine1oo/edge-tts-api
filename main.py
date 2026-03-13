@@ -26,8 +26,3 @@ def tts():
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
-```
-
-Then update **Edge TTS** body to:
-```
-{{ JSON.stringify({ text: $json.hindiText, voice: "hi-IN-SwaraNeural", filename: "meal-plan-" + $json.MealDate + ".mp3" }) }}
